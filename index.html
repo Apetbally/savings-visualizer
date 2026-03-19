@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SavingsVisualizer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <main class="container">
+    <header class="hero">
+      <div class="hero-badge">Financial Inclusion × Data Visualization</div>
+      <h1>SavingsVisualizer</h1>
+      <p>
+        Compare bank savings, inflation-adjusted value, and alternative investments
+        to see what your money could really be worth over time.
+      </p>
+    </header>
+
+    <section class="panel input-section">
+      <div class="section-head">
+        <h2>Enter Your Values</h2>
+        <span class="section-tag">Interactive Calculator</span>
+      </div>
+
+      <div class="input-grid">
+        <div class="form-group">
+          <label for="initialSavings">Initial Savings (₦)</label>
+          <input type="number" id="initialSavings" value="500000" />
+        </div>
+
+        <div class="form-group">
+          <label for="monthlyContribution">Monthly Contribution (₦)</label>
+          <input type="number" id="monthlyContribution" value="50000" />
+        </div>
+
+        <div class="form-group">
+          <label for="years">Number of Years</label>
+          <input type="number" id="years" value="5" min="1" />
+        </div>
+
+        <div class="form-group">
+          <label for="bankRate">Bank Interest Rate (%)</label>
+          <input type="number" id="bankRate" value="4" step="0.1" />
+        </div>
+
+        <div class="form-group">
+          <label for="inflationRate">Inflation Rate (%)</label>
+          <input type="number" id="inflationRate" value="12" step="0.1" />
+        </div>
+
+        <div class="form-group">
+          <label for="realEstateRate">Real Estate Return (%)</label>
+          <input type="number" id="realEstateRate" value="15" step="0.1" />
+        </div>
+
+        <div class="form-group">
+          <label for="agricultureRate">Agriculture Return (%)</label>
+          <input type="number" id="agricultureRate" value="18" step="0.1" />
+        </div>
+      </div>
+
+      <button id="calculateBtn" class="primary-btn">Calculate Projection</button>
+    </section>
+
+    <section class="panel results-section">
+      <div class="section-head">
+        <h2>Results Summary</h2>
+        <span class="section-tag">Final Year View</span>
+      </div>
+
+      <div class="results-grid">
+        <div class="card">
+          <h3>Bank Savings (Nominal)</h3>
+          <p id="bankResult">₦0</p>
+        </div>
+
+        <div class="card">
+          <h3>Bank Savings (Real)</h3>
+          <p id="inflationResult">₦0</p>
+        </div>
+
+        <div class="card">
+          <h3>Real Estate (Nominal)</h3>
+          <p id="realEstateResult">₦0</p>
+        </div>
+
+        <div class="card">
+          <h3>Agriculture (Nominal)</h3>
+          <p id="agricultureResult">₦0</p>
+        </div>
+
+        <div class="card highlight-card">
+          <h3>Best Option</h3>
+          <p id="bestOption">-</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel chart-section">
+      <div class="section-head">
+        <h2>Savings Growth Comparison</h2>
+        <span class="section-tag">Nominal vs Real Value</span>
+      </div>
+      <div class="chart-wrap">
+        <canvas id="savingsChart"></canvas>
+      </div>
+    </section>
+
+    <section class="panel insight-section">
+      <div class="section-head">
+        <h2>AI Insight</h2>
+        <span class="section-tag">Natural Language Summary</span>
+      </div>
+      <p id="insightText">Your financial insight will appear here after calculation.</p>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

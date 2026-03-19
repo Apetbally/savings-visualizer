@@ -71,6 +71,28 @@ Real Value = Nominal Value / (1 + Inflation Rate)^Years
 https://apetbally.github.io/savings-visualizer/
 ---
 
+## Screenshots
+
+### Full Dashboard View
+
+![Dashboard Top](dashboard.png)
+![Dashboard Bottom](dashboard-cont.png)
+
+### Results Section
+
+![Results](dashboard-result.png)
+
+### Chart Visualization
+
+![Chart](chart.png)
+
+### AI Insight
+
+![Insight](insight.png)
+
+
+---
+
 ## Project Structure
 
 * index.html

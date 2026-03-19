@@ -70,8 +70,7 @@ Real Value = Nominal Value / (1 + Inflation Rate)^Years
 ## Live Demo
 
 Add your GitHub Pages link here:
-https://yourusername.github.io/savings-visualizer/
-
+https://apetbally.github.io/savings-visualizer/)
 ---
 
 ## Project Structure
